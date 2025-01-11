@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    :root {
+      --primary: #FF61D8;
+      --primary-glow: rgba(255, 97, 216, 0.15);
+      --secondary: #4A90E2;
+      --secondary-glow: rgba(74, 144, 226, 0.15);
+      --accent: #FFD700;
+      --accent-glow: rgba(255, 215, 0, 0.15);
+      --background: #0A0B14;
+      --surface: rgba(36, 40, 59, 0.8);
+      --surface-light: rgba(47, 52, 71, 0.6);
+      --text: #A9B1D6;
+      --text-bright: #C0CAF5;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(circle at top right, #1A1B26, #0A0B14);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .app-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .rainbow-border {
+      background: linear-gradient(45deg, #FF61D8, #4A90E2, #FFD700, #FF61D8);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      border-radius: 16px;
+      padding: 3px;
+      box-shadow: 0 0 20px rgba(255, 97, 216, 0.2);
+    }
+
+    .container {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 30px;
+      backdrop-filter: blur(12px);
+    }
+
+    /* Logo */
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    /* Topic Selector */
+    .topic-selector {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .topic-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .topic-button {
+      background: var(--surface-light);
+      border: 2px solid var(--primary);
+      color: var(--text-bright);
+      border-radius: 25px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1em;
+    }
+
+    .topic-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px var(--primary-glow);
+    }
+
+    .topic-button.active {
+      background: var(--primary);
+      color: var(--background);
+    }
+
+    /* Audio Controls */
+    .audio-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .button-magical {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px var(--primary-glow);
+    }
+
+    .button-magical:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--primary-glow);
+    }
+
+    .upload-zone {
+      border: 3px dashed var(--secondary);
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background: var(--surface-light);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .upload-zone:hover {
+      border-color: var(--primary);
+      background: rgba(255, 97, 216, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Waveform Visualizer */
+    .waveform-visualizer {
+      width: 100%;
+      height: 120px;
+      background: var(--surface);
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Transcription Display */
+    .transcription-display {
+      background: var(--surface-light);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .transcription-content {
+      min-height: 200px;
+      padding: 20px;
+      background: var(--surface);
+      border-radius: 8px;
+      color: var(--text-bright);
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .processing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-size: 1.1em;
+    }
+
+    /* Export Panel */
+    .export-panel {
+      margin-top: 30px;
+      padding: 20px;
+      background: var(--surface-light);
+      border-radius: 12px;
+    }
+
+    .export-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Utility Classes */
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .glass-card {
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+    }
+
+    .section-magical {
+      position: relative;
+      padding: 24px;
+      margin: 20px 0;
+      background: linear-gradient(135deg, var(--surface), var(--surface-light));
+      border-radius: 16px;
+      border: 1px solid var(--glass-border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-header .icon {
+      font-size: 24px;
+    }
+
+    .section-header .title {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    /* Animations */
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .sparkle {
+      animation: sparkle 1.5s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .app-container {
+        padding: 20px 10px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .topic-buttons {
+        gap: 8px;
+      }
+
+      .topic-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+
+      .button-magical {
+        padding: 12px 24px;
+        font-size: 1em;
+      }
+    }

@@ -1,0 +1,152 @@
+.collapsible-section {
+      margin: 20px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface-light);
+    }
+
+    .collapsible-header {
+      width: 100%;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: none;
+      border: none;
+      color: var(--text-bright);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .collapsible-header:hover {
+      background: var(--surface);
+    }
+
+    .collapsible-header.open {
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .section-icon {
+      font-size: 1.2em;
+    }
+
+    .section-title {
+      flex: 1;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .toggle-icon {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible-content {
+      padding: 20px;
+    }
+
+    .transcription-stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      padding: 10px;
+      background: var(--surface);
+      border-radius: 8px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .stat-icon {
+      font-size: 1.2em;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .summarizer-tool {
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .summarizer-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .control-group label {
+      color: var(--text-bright);
+      font-size: 0.9em;
+    }
+
+    .control-group select,
+    .control-group input {
+      background: var(--surface-light);
+      color: var(--text);
+      border: 2px solid var(--primary);
+      border-radius: 6px;
+      padding: 8px;
+    }
+
+    .summarize-button {
+      background: var(--primary);
+      color: var(--surface);
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .summarize-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .source-selector {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tab-button {
+      background: var(--surface-light);
+      color: var(--text);
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-button.active {
+      background: var(--primary);
+      color: var(--surface);
+    }
+
+    .download-button {
+      background: var(--secondary);
+      color: var(--surface);
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .download-button:hover {
+      transform: translateY(-2px);
+    }
